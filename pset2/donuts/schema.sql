@@ -31,6 +31,7 @@ FOREIGN KEY("customer_id") REFERENCES "customers"("id")
 CREATE TABLE "donut_ingred" (
 "donut_id" INTEGER,
 "ingredient_id" INTEGER,
+PRIMARY KEY("donut_id", "ingredient_id"),
 FOREIGN KEY("donut_id") REFERENCES "donuts"("id"),
 FOREIGN KEY("ingredient_id") REFERENCES "ingredients"("id")
 );
