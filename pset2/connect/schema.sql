@@ -27,6 +27,7 @@ PRIMARY KEY("id")
 CREATE TABLE "people_connections" (
 "user_id" INTEGER,
 "conn_user_id" INTEGER,
+PRIMARY KEY("user_id", "conn_user_id"),
 FOREIGN KEY("user_id") REFERENCES "users"("id"),
 FOREIGN KEY("conn_user_id") REFERENCES "users"("id")
 );
@@ -37,6 +38,7 @@ CREATE TABLE "school_connections" (
 "start_date" NUMERIC NOT NULL,
 "end_date" NUMERIC,
 "degree_type" TEXT NOT NULL,
+PRIMARY KEY("user_id", "school_id"),
 FOREIGN KEY("user_id") REFERENCES "users"("id"),
 FOREIGN KEY("school_id") REFERENCES "schools"("id")
 );
@@ -47,6 +49,7 @@ CREATE TABLE "company_connections" (
 "start_date" NUMERIC NOT NULL,
 "end_date" NUMERIC,
 "title" TEXT NOT NULL,
+PRIMARY KEY("user_id", "company_id"),
 FOREIGN KEY("user_id") REFERENCES "users"("id"),
 FOREIGN KEY("company_id") REFERENCES "companies"("id")
 );
