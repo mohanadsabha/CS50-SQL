@@ -2,6 +2,8 @@
 
 By Mohanad M. Abusabha
 
+Video overview: https://youtu.be/loGzDe_t5rk
+
 ## Scope
 
 The purpose of this database is to facilitate the management of a university's core data, enabling efficient storage, retrieval,
